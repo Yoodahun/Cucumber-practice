@@ -27,9 +27,14 @@ public class stepDefinition {
         System.out.println("validated homepage");
     }
 
-    @And("^Cards are displayed$")
-    public void cardsAreDisplayed() {
-        System.out.println("validated cards");
+    @When("User login into application with {string} and {string}")
+    public void userLoginIntoApplicationWithAnd(String username, String password) {
+        System.out.println(username);
+        System.out.println(password);
     }
 
+    @And("Cards displayed are {string}")
+    public void cardsDisplayedAre(String arg0) {
+        System.out.println("cards displayed are " + arg0 );
+    }
 }
